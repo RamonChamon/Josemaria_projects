@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="shortcut icon" href="favicon.ico">
+
     <title>Quotes by Josémaria Escriva</title>
     <style>
         body {
@@ -20,12 +25,38 @@
             font-size: 16px;
             cursor: pointer;
         }
+		.video-background 
+		{
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  height: 100vh;
+		  width: 100vw;
+		  z-index: -1;
+		  overflow: hidden;
+		}
+
+		.video-background iframe 
+		{
+		  width: 100vw;
+		  height: 100vh;
+		  pointer-events: none; /* Prevent interaction */
+		}
     </style>
 </head>
 <body>
     <h1>Inspire me</h1>
+<div class="video-background">
+  <iframe 
+    src="https://www.youtube.com/embed/SR1nMJbFl0c?autoplay=1&mute=1&controls=0&loop=1&playlist=SR1nMJbFl0c" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
+</div>
+
     <div id="quote-box">Click the button to get a quote!</div>
-    <button onclick="getQuote()">Get Quote</button>
+    <button onclick="getQuote()">Dime me mas señor</button>
 
     <!-- ✅ Add this line to include the generated quotes.js -->
     <script src="quotes.js"></script>
