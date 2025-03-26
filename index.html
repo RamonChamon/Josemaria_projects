@@ -27,10 +27,20 @@
 		}
         }
         button {
-            padding: 10px 20px;
+            padding: 15px 30px;
             font-size: 46px;
             cursor: pointer;
+			font-weight: bold;
+			border-radius: 8px;
+			background-color: #000000;
+			color: white;
+			border: 2px solid white;
+			transition: all 0.3s ease;
         }
+		button:hover {
+			background-color: #eeeeee;
+			transform: scale(1.05);  
+		}
 		.video-background 
 		{
 		  position: fixed;
@@ -47,6 +57,9 @@
 		  width: 100vw;
 		  height: 100vh;
 		  pointer-events: none; /* Prevent interaction */
+		}
+		h1{
+		color: white;
 		}
     </style>
 </head>
