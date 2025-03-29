@@ -47,12 +47,15 @@
 			  transform: scale(1.05);
 			}
 		.video-background {
-		  width: 100vw;
-		  height: 100vh;
 		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  height: 100vh;
+		  width: 100vw;
+		  z-index: -2; /* lower than the flags */
 		  object-fit: cover;
-		  z-index: -2;
 		}
+
 		h1{
 		color: white;
 		}
@@ -92,7 +95,7 @@
 <div class="main-content">
   <!-- Your existing <video> and .center-content go here -->
 
-<video id="bg-video" autoplay muted loop playsinline class="video-background">
+<video id="bg-video" autoplay muted loop playsinline class="video-background" style="width: 100vw; height: 100vh; object-fit: cover;">
 	  <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
 	  <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
   Your browser does not support the video tag.
