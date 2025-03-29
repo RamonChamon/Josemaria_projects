@@ -64,7 +64,7 @@
 </head>
 <body>
     <h1>Inspire me</h1>
-<video id="bg-video" autoplay muted loop playsinline control class="video-background">
+<video id="bg-video" autoplay muted loop playsinline controls class="video-background">
   <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
   <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
   Your browser does not support the video tag.
@@ -82,16 +82,12 @@
         const randomIndex = Math.floor(Math.random() * quotes.length);
         document.getElementById("quote-box").innerText = quotes[randomIndex];
     }
-	<script>
 	function toggleSound() {
-	  const video = document.getElementById("Who_is_Josemaria_Escriva_1080p.mp4");
+	  const video = document.getElementById("bg-video");
 	  video.muted = !video.muted;
-	  
 	  alert(video.muted ? "🔇 Sound Off" : "🔊 Sound On");
 	}
-</script>
-
-    </script>
+	</script>
 </body>
 
 </html>
