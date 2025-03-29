@@ -25,7 +25,6 @@
 		    border-radius: 12px;
 		    display: inline-block;
 		}
-        }
         button {
             padding: 15px 30px;
             font-size: 46px;
@@ -65,16 +64,11 @@
 </head>
 <body>
     <h1>Inspire me</h1>
-<div class="video-background">
-  <iframe 
-    src="https://www.youtube.com/embed/7YW9DU6pHLE?autoplay=1&mute=1&controls=0&loop=1&playlist=7YW9DU6pHLE" 
-    frameborder="0" 
-    allow="autoplay; encrypted-media" 
-    allowfullscreen>
-  </iframe>
-</div>
-
-
+<video id="bg-video" autoplay muted loop playsinline control class="video-background">
+  <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
+  <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
+  Your browser does not support the video tag.
+</video>
     <div id="quote-box">Click the button to get a quote!</div>
     <button onclick="getQuote()">Dime me más señor</button>
 
