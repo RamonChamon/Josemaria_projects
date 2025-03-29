@@ -64,10 +64,35 @@
 		  transform: translate(-50%, -50%);
 		  text-align: center;
 		}
+		.flag-side {
+		  position: fixed;
+		  top: 0;
+		  width: 100px;
+		  height: 100vh;
+		  background-image: url("Flag_of_Aragon.svg");
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  z-index: -1;
+		  opacity: 0.85;
+		}
+		.flag-left {
+		  left: 0;
+		}
 
+		.flag-right {
+		  right: 0;
+		}
     </style>
 </head>
+
 <body>
+<div class="flag-side flag-left"></div>
+<div class="flag-side flag-right"></div>
+
+<div class="main-content">
+  <!-- Your existing <video> and .center-content go here -->
+
 <video id="bg-video" autoplay muted loop playsinline class="video-background">
 	  <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
 	  <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
