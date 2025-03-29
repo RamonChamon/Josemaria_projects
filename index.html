@@ -17,12 +17,12 @@
             margin: 50px;
         }
         #quote-box {
-            font-size: 20px;
-            margin: 20px;
+            font-size: 10px;
+            margin: 10px;
 		    background: rgba(0, 0, 0, 0.5);
 		    color: white;
-		    padding: 20px;
-		    border-radius: 12px;
+		    padding: 10px;
+		    border-radius: 6px;
 		    display: inline-block;
 		}
         button {
@@ -50,28 +50,29 @@
 		  z-index: -1;
 		  overflow: hidden;
 		}
-
-		.video-background iframe 
-		{
-		  width: 100vw;
-		  height: 100vh;
-		  pointer-events: none; /* Prevent interaction */
-		}
 		h1{
 		color: white;
 		}
+		.center-content {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+			}
     </style>
 </head>
 <body>
-    <h1>Inspire me</h1>
-<video id="bg-video" autoplay muted loop playsinline controls class="video-background">
-  <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
-  <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
+<video id="bg-video" autoplay muted loop playsinline class="video-background">
+	  <source src="Who_is_Josemaria_Escriva_1080p.mp4" type="video/mp4">
+	  <track src="Who is Josemaría Escriva？ What is Opus Dei？ [1MTgInUR1UE].en.vtt" kind="subtitles" srclang="en" label="English" default>
   Your browser does not support the video tag.
 </video>
-    <div id="quote-box">Click the button to get a quote!</div>
-    <button onclick="getQuote()">Dime me más señor</button>
-	<button onclick="toggleSound()">🔊 Toggle Sound</button>
+    <div class="center-content">
+		<h1>Inspire me</h1>
+		<div id="quote-box">Click the button to get a quote!</div><br>
+		<button onclick="getQuote()">Dime me más señor</button>
+		<button onclick="toggleSound()">🔊 Toggle Sound</button>
+	</div>
 
     <!-- ✅ Add this line to include the generated quotes.js -->
     <script src="quotes.js"></script>
