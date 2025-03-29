@@ -71,6 +71,7 @@
 </video>
     <div id="quote-box">Click the button to get a quote!</div>
     <button onclick="getQuote()">Dime me más señor</button>
+	<button onclick="toggleSound()">🔊 Toggle Sound</button>
 
     <!-- ✅ Add this line to include the generated quotes.js -->
     <script src="quotes.js"></script>
@@ -81,6 +82,15 @@
         const randomIndex = Math.floor(Math.random() * quotes.length);
         document.getElementById("quote-box").innerText = quotes[randomIndex];
     }
+	<script>
+	function toggleSound() {
+	  const video = document.getElementById("Who_is_Josemaria_Escriva_1080p.mp4");
+	  video.muted = !video.muted;
+	  
+	  alert(video.muted ? "🔇 Sound Off" : "🔊 Sound On");
+	}
+</script>
+
     </script>
 </body>
 
