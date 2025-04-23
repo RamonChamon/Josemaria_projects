@@ -114,6 +114,7 @@
       display: none;
     }
   }
+  
     </style>
 </head>
 
@@ -130,12 +131,14 @@
   Your browser does not support the video tag.
 </video>
     <div class="center-content">
+	  <div id="quote-container">
 		<h1>Inspire me</h1>
 		<div id="quote-box">Click the button to get a quote!</div><br>
 		<button onclick="getQuote()">Dime me más señor</button>
 		<button onclick="toggleSound()">🔊 Toggle Sound</button>
 	</div>
-
+	<button onclick="toggleQuotes()">📝 Show/Hide Quote</button>
+  </div>
     <!-- ✅ Add this line to include the generated quotes.js -->
     <script src="quotes.js"></script>
 
@@ -150,7 +153,10 @@
 	  video.muted = !video.muted;
 	  alert(video.muted ? "🔇 Sound Off" : "🔊 Sound On");
 	}
+	function toggleQuotes() {
+	  const container = document.getElementById("quote-container");
+      container.style.display = container.style.display === "none" ? "block" : "none";
+}
 	</script>
 </body>
-
 </html>
